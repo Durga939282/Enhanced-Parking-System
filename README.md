@@ -71,7 +71,13 @@ config.py ⚙️: Configuration settings run.py ▶️: Main execution script te
 📸 Output Screenshots 📸:
 ![Screenshot (26)](https://github.com/user-attachments/assets/0f20300a-46f0-4dc9-8995-ac7fb85a4753)
 
+![Screenshot (27)](https://github.com/user-attachments/assets/32060634-0f1d-4fbb-9dc3-2e46bc4e793d)
 
+![Screenshot (30)](https://github.com/user-attachments/assets/b7298efc-6eea-4f0d-bdee-2ea17602dc9b)
+
+![Screenshot (29)](https://github.com/user-attachments/assets/788abe71-7871-494e-8f2a-08524e8b818f)
+
+![Screenshot (28)](https://github.com/user-attachments/assets/d6765b3e-aa7a-4c61-8d84-a1e78d93055a)
 
 
 💡 Benefits 💡
