@@ -69,18 +69,10 @@ data/ 📊 test/, train/, val/, split.py, xml_to_yolo.py
 config.py ⚙️: Configuration settings run.py ▶️: Main execution script test.py ✅: Testing script train.py 🎓: Training script requirements.txt 📋: Dependency list
 
 📸 Output Screenshots 📸:
+![Screenshot (26)](https://github.com/user-attachments/assets/0f20300a-46f0-4dc9-8995-ac7fb85a4753)
 
-Screenshot (28)
 
-Screenshot (27)
 
-Screenshot (29)
-
-Screenshot (30)
-
-Screenshot (35)
-
-Screenshot (34)
 
 💡 Benefits 💡
 
