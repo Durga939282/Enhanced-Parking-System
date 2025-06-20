@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .parking-layout {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .parking-spot {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .empty {
+            background-color: #4CAF50;
+        }
+        .occupied {
+            background-color: #F44336;
+        }
+        .unknown {
+            background-color: #9E9E9E;
+        }
+        .plate-info {
+            margin-top: 5px;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+        .live-feed {
+            max-width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .live-feed img {
+            max-width: 100%;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        .parking-spot:hover {
+            transform: scale(1.05);
+        }
+        .number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+            color: yellow;
+            font-weight: bold;
+        }
+    </style>
+    <script src="{{ url_for('static', filename='js/parking.js') }}"></script>
+</head>
+<body>
+    <h1>Smart Parking System</h1>
+    
+    <div class="live-feed">
+        <h2>Live Feed</h2>
+        <img src="{{ url_for('video_feed') }}" alt="Live Parking Feed">
+    </div>
+    
+    <h2>Parking Spots</h2>
+    <div class="parking-layout">
+        {% for spot_num in range(1, 13) %}
+            <div class="parking-spot {{ spots[spot_num]['status'] }}" id="spot-{{ spot_num }}">
+                <div class="number">Spot {{ spot_num }}</div>
+                <div class="plate-info">
+                    {% if spots[spot_num]['status'] == 'occupied' and spots[spot_num]['plate'] %}
+                        Plate: {{ spots[spot_num]['plate'] }}
+                    {% elif spots[spot_num]['status'] == 'occupied' %}
+                        No plate detected
+                    {% else %}
+                        Available
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <script>
+        // Auto-refresh the page every 5 seconds
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+    </script>
+</body>
+</html> 

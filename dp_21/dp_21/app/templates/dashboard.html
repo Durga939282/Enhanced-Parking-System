@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="logo">
+                <i class="fas fa-parking"></i>
+                <h1>Smart Parking System</h1>
+            </div>
+            <div class="user-info">
+                <span>Welcome, {{ session['username'] }}</span>
+                <a href="{{ url_for('main.logout') }}" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-card total">
+                <i class="fas fa-parking"></i>
+                <div class="stat-info">
+                    <h3>Total Spots</h3>
+                    <p id="total-spots">12</p>
+                </div>
+            </div>
+            <div class="stat-card available">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <h3>Available</h3>
+                    <p id="available-spots">0</p>
+                </div>
+            </div>
+            <div class="stat-card occupied">
+                <i class="fas fa-car"></i>
+                <div class="stat-info">
+                    <h3>Occupied</h3>
+                    <p id="occupied-spots">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parking Grid -->
+        <div class="parking-layout">
+            <h2><i class="fas fa-th"></i> Parking Layout</h2>
+            <div class="parking-grid" id="parking-grid">
+                <!-- Spots will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Live Feed Section -->
+        <div class="live-feed">
+            <h2><i class="fas fa-video"></i> Live Camera Feed</h2>
+            <div class="camera-feed">
+                <img src="{{ url_for('main.video_feed') }}" alt="Live Parking Feed">
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html> 
