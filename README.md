@@ -66,7 +66,16 @@ smart_parking/ 🏋️: weights/, args.yaml, training visuals (e.g., confusion_m
 
 data/ 📊 test/, train/, val/, split.py, xml_to_yolo.py
 
-config.py ⚙️: Configuration settings run.py ▶️: Main execution script test.py ✅: Testing script train.py 🎓: Training script requirements.txt 📋: Dependency list
+config.py ⚙️: Configuration settings run.py ▶️: Main execution script test.py ✅: Testing script train.py 🎓: Training script requirements.txt 📋: Dependency list 
+
+Enhanced-Parking-System/
+├── ParkingSystem.py        # Core parking system logic
+├── train_model.py          # Machine learning model training
+├── IoT_integration.ino     # IoT sensor integration (Arduino)
+├── requirements.txt        # Python dependencies
+├── data/                   # Datasets for training
+├── models/                 # Pre-trained ML models
+└── README.md               # You're here!
 
 📸 Output Screenshots 📸:
 ![Screenshot (26)](https://github.com/user-attachments/assets/0f20300a-46f0-4dc9-8995-ac7fb85a4753)
@@ -127,3 +136,26 @@ Open a PR! 🎉
 📜 License 📜
 
 This project is licensed under the MIT License. Check the LICENSE file for details! ✅
+
+🌐 Connect with Us
+
+
+
+
+
+Author: Durga939282
+
+
+
+Issues & Feedback: GitHub Issues
+
+
+
+Community: Join the discussion on X or star this repo! ⭐
+
+
+
+
+
+🚀 Make parking smarter with the Enhanced Parking System!
+Built with 💻 and ❤️ by Durga939282.
